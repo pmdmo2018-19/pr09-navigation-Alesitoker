@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="es.iessaladillo.pedrojoya.pr08.ui.main.MainFragment"
+        android:label="@string/mainFragName"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/actionMainToDetail"
+            app:destination="@id/destDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/actionMainToSettings"
+            app:destination="@id/destSettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/destDetailFragment"
+        android:name="es.iessaladillo.pedrojoya.pr08.ui.Detail.DetailFragment"
+        android:label="@string/detail_title"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/destSettingsFragment"
+        android:name="es.iessaladillo.pedrojoya.pr08.ui.settings.SettingsFragment"
+        android:label="@string/settingsName" />
+</navigation>
